@@ -12,7 +12,7 @@ else:
 count = 0
 prevDirection = ""
 while True: #infinitely loops through directions.
-    ranTime = random.randint(3,6)
+    ranTime = random.randint(30,60)
     ranDirection = random.randint(0,len(directions)-1)
     if count > 0:
         if sameVal == False:
