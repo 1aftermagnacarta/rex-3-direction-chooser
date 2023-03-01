@@ -1,18 +1,20 @@
+def toBool(text):
+    if text.lower() == "y":
+        return True
+    else:
+        return False
+        
 import random
 import time
 
 directions = ["Left","Right","Up","Down","Forward"]
 
-sameVal = input("Duplicate directions? Y/N \n")
-if sameVal.lower() == "n":
-    sameVal = False
-else:
-    sameVal = True
+sameVal = toBool(input("Duplicate directions? Y/N \n"))
 
 count = 0
 prevDirection = ""
 while True: #infinitely loops through directions.
-    ranTime = random.randint(60,120)
+    ranTime = random.randint(3,6)
     ranDirection = random.randint(0,len(directions)-1)
     if count > 0:
         if sameVal == False:
