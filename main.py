@@ -1,11 +1,11 @@
+import random
+import time
+
 def toBool(text):
     if text.lower() == "y":
         return True
     else:
         return False
-        
-import random
-import time
 
 directions = ["Left","Right","Up","Down","Forward"]
 
