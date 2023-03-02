@@ -1,7 +1,7 @@
 import random
 import time
 
-def toBool(text):
+def toBool(text): #returns True if the user inputs yes, False if the user inputs no.
     if text.lower() == "y":
         return True
     else:
