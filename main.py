@@ -1,19 +1,23 @@
-import random
-import time
-
-def toBool(text): #returns True if the user inputs yes, False if the user inputs no.
+def toBool(text):
     if text.lower() == "y":
         return True
     else:
         return False
+        
+import random
+import time
 
 directions = ["Left","Right","Up","Down","Forward"]
 
 sameVal = toBool(input("Duplicate directions? Y/N \n"))
 
+sleepLenMin = int(input("\nEnter the min sleep length: \n")) #I will add validation soon, for now make sure your input is above 0.
+
+sleepLenMax = int(input("\nEnter the max sleep length: \n")) #I will add validation soon, for now make sure your input is above 0 and is above the sleepLenMin value.
+
 prevDirection = ""
 while True: #infinitely loops through directions.
-    ranTime = random.randint(30,60)
+    ranTime = random.randint(sleepLenMin,sleepLenMax)
     ranDirection = random.randint(0,len(directions)-1)
     if sameVal == False:
         if prevDirection == ranDirection:
